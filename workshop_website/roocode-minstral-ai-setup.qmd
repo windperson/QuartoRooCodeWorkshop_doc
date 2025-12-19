@@ -2,5 +2,62 @@
 #
 ---
 
-# Roo Code 擴充套件使用 Minstral AI API Key 設定說明
+# Roo Code 擴充套件設定 AI API Key 
+
+Mistral AI 在最近推出一個在2025年底前可免費使用的程式碼生成模型 [Devstral 2](https://docs.mistral.ai/models/devstral-2-25-12) : <https://mistral.ai/news/devstral-2-vibe-cli>
+
+Roo Code 擴充套件也支援使用 Mistral AI 模型，官方說明：<https://docs.roocode.com/providers/mistral>
+
+## 設定 Minstral AI API Key 步驟
+
+Roo Code 擴充套件第一次打開時，會顯示如下畫面，選擇 Use another provider:
+
+![](./images/setup_roocode_api_00.png)
+
+API Provider 選擇 Minstral AI，然後在 API Key 欄位下方的 Get Mistral/Codestral API Key 按鈕點下去：
+
+![](./images/setup_roocode_api_01.png)
+
+會開啟瀏覽器前往 Minstral AI 網站（），可使用幾種流行的 OAuth 認證來註冊帳號:
+
+![](./images/setup_roocode_api_02.png)
+
+註冊完成並登入後，選擇左上第三個 API Keys <https://console.mistral.ai/home?workspace_dialog=apiKeys> 可建立 API Key：
+
+![](./images/setup_roocode_api_03.png)
+
+建立 API Key 時第一次會問你要使用哪種 Plan，選擇左邊的 Free Plan 即可：
+
+![](./images/setup_roocode_api_04.png)
+
+建立 API Key，Key Name名稱可任意輸入，然後按 Create new key：
+
+![](./images/setup_roocode_api_05.png)
+
+建立完成時會顯示 API Key，記得一定要按 Copy key 複製起來存在安全的地方，否則之後就看不到完整的API Key內容了：
+
+![](./images/setup_roocode_api_06.png)
+
+回到 Visual Studio Code 的 Roo Code 擴充套件設定畫面，將剛剛複製的 API Key 貼到 Minstral API Key 欄位，然後下方的 Model 選擇 `devstral-medium-latest`：
+
+![](./images/setup_roocode_api_07.png)
+
+按下方的 Get started 按鈕，即可完成 Roo Code 擴充套件的 Minstral AI API Key 設定，然後應該就可以開始使用文字談話介面的功能開始互動：
+
+1. 按最左下角的按鈕，在開啟的選單中，選擇 AI Mode 為 Ask :<br/>![](./images/setup_roocode_api_08.png)
+2. 在文字談話介面中輸入 `How recently knowledge have you trained?` 送出，應該會有如下圖的回應：<br/>![](./images/setup_roocode_api_09.png)<br/>表示 Minstral AI 模型已經可以正常使用了。
+
+## 換用其他 AI 服務提供者的方法
+
+如果要換用其他 AI 服務提供者，在 Visual Studio Code 的 Roo Code 擴充套件畫面右上方第三個齒輪按鈕，然後選擇左邊第一個插頭分頁：
+
+![](./images/roocode_change_ai_provider.png)
+
+::: {.callout-tip}
+
+Roo Code 支援的 AI 服務提供者，例如 Gemini、OpenAI、Anthropic 等等，請參考官方說明文件：<https://docs.roocode.com/providers/>
+
+:::
+
+---
 

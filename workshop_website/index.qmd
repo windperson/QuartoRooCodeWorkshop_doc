@@ -7,4 +7,4 @@ title: "Quarto Roo Code workshop"
 [macOS 相關工具安裝](./install-tools_macos.qmd)
 
 
-[Roo Code 擴充套件使用 Minstral AI API Key 設定說明](./roocode-minstral-ai-setup.qmd)
+[Roo Code 擴充套件設定 Minstral AI API Key](./roocode-minstral-ai-setup.qmd)
