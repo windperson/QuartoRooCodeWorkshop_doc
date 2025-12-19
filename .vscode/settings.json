@@ -1,0 +1,6 @@
+{
+    "editor.defaultFormatter": "quarto.quarto",
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    }
+}

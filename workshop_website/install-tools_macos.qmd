@@ -1,0 +1,173 @@
+---
+# for macOS installation instructions
+watch-inputs : true
+---
+
+## 安裝工具 (macOS)
+
+需要安裝的軟體有：
+
+* [git](https://git-scm.com/install/mac)
+* [XCode Command Line Tools](https://developer.apple.com/documentation/xcode/installing-the-command-line-tools#Install-the-Command-Line-Tools-package-in-Terminal)（假如系統未安裝 XCode）
+* [Quarto CLI ](https://quarto.org/docs/get-started/)
+* [Google Chrome 瀏覽器](https://www.google.com/chrome/)（假如只有macOS內建 safari）
+* [Visual Studio Code](https://code.visualstudio.com/)<br/>並安裝以下擴充套件 (Extensions)：
+  * [Roo Code](https://marketplace.visualstudio.com/items?itemName=RooVeterinaryInc.roo-cline)
+  * [Quarto](https://marketplace.visualstudio.com/items?itemName=quarto.quarto)
+  * [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
+  * [Git History Diff](https://marketplace.visualstudio.com/items?itemName=huizhou.githd)
+  
+
+以下為 Optional 軟體，假如 .qmd 文件中有使用到 R-markdown 語法或 Python Jupyter Notebook 才須安裝：
+
+* [R-markdown](https://rmarkdown.rstudio.com/)
+* [Jupyter Notebook](https://jupyter.org/)
+
+
+建議使用 [Homebrew](https://brew.sh/) 套件管理工具來安裝上述軟體。
+
+Homebrew 是 macOS 上非常流行的套件管理工具，可以方便地安裝、更新和管理各種軟體包。安裝和使用教學可以參考這篇：<https://ithelp.ithome.com.tw/articles/10231649>
+
+### 安裝 git 
+
+Homebrew 提供了 git 的安裝方式：<https://formulae.brew.sh/formula/git>
+
+1. 開啟終端機 (Terminal) 應用程式
+2. 輸入以下指令來安裝 ：
+
+   ```sh
+   brew install git
+   ```
+3. 安裝完成後，輸入以下指令以便設定 git 的使用者名稱：
+  
+   ```sh
+   git config --global user.name "你的名字"
+   ```
+  
+   以及設定電子郵件地址：
+  
+   ```sh
+   git config --global user.email "你的電子郵件地址"
+   ```
+
+然後可以用 `git config --list` 指令來確認設定是否正確。
+
+### 安裝 XCode Command Line Tools<br/>（假如系統未安裝XCode）
+
+1. 開啟終端機 (Terminal) 應用程式
+2. 輸入以下指令來安裝 ：
+
+   ```sh
+   xcode-select --install
+   ```
+3. 會跳出一個視窗，點選「安裝」(Install) 按鈕，並同意授權條款 (Agree to the Terms of Service) 即可開始安裝。
+
+### 安裝 Quarto CLI
+
+Homebrew 提供了 Quarto 的安裝方式：<https://formulae.brew.sh/cask/quarto>
+
+1. 開啟終端機 (Terminal) 應用程式
+2. 輸入以下指令來安裝 ：
+
+   ```sh
+   brew install --cask quarto
+   ```
+3. 安裝中會提示你輸入sudo密碼，請輸入你的 macOS 使用者密碼以繼續安裝。<br/>
+   ![](./images/macos_install/quarto_install_00.png)
+
+:::{.callout-tip}
+
+假如在文件中有使用到 mermaid 語法或需要輸出 PDF 文件，請在安裝完 Quarto 後，打開終端機 (Terminal) 並輸入下列兩個指令來安裝 Quarto 的衍生套件：
+   
+```sh
+quarto install chromium
+quarto install TinyTex
+```
+   
+![](./images/macos_install/quarto_install_tools.png)
+    
+chromium 是 Quarto 的 mermaid 語法預覽圖需要，而 TinyTex 則是用來編譯 PDF 文件所需的 LaTeX 發行版。
+:::
+
+### 安裝 Google Chrome 瀏覽器<br/>（假如只有macOS內建safari）
+
+Homebrew 提供了 Google Chrome 的安裝方式：<https://formulae.brew.sh/cask/google-chrome>
+
+1. 開啟終端機 (Terminal) 應用程式
+2. 輸入以下指令來安裝 ：
+
+   ```sh
+   brew install --cask google-chrome
+   ```
+
+### 安裝 Visual Studio Code
+
+Homebrew 提供了 Visual Studio Code 的安裝方式：<https://formulae.brew.sh/cask/visual-studio-code>
+
+1. 開啟終端機 (Terminal) 應用程式
+2. 輸入以下指令來安裝 ：
+
+   ```sh
+   brew install --cask visual-studio-code
+   ```
+
+:::{.callout-tip}
+
+安裝完畢後，可[設定原本 Visual Studio Code 內建的 GitHub Copilot chat 介面不要每次都跑出來](https://code.visualstudio.com/docs/configure/custom-layout#_secondary-side-bar)： 
+
+1. 開啟 Visual Studio Code 應用程式
+2. 選擇 Settings :<br/>![](./images/macos_install/open_vscode_settings.png)
+3. 在搜尋欄輸入 `workbench.secondarySideBar.defaultVisibility` ，然後出現的設定下拉選單，選擇 **hidden** ：<br/>![](./images/macos_install/vscode_hide_secondary_sidebar.png)
+
+:::
+
+### 安裝 Visual Studio Code 擴充套件
+
+最快的方法是下載這個 GitHub Respository 的 `0-init` Release 壓縮檔:
+
+<https://github.com/windperson/QuartoRooCodeWorkshop/releases/tag/0-init>
+
+![](./images/macos_install/download_workshop_release_0.png)
+
+解壓縮後，在 Visual Studio Code 中開啟解壓縮後的資料夾:
+
+![](./images/macos_install/vscode_open_workshop_folder.png)
+
+然後右下角會跳出提示，詢問是否要安裝推薦的擴充套件:
+
+![](./images/macos_install/vscode_prompt_recommended_extensions.png)
+
+可以按下 Install 直接安裝，或按 Show Recommendations 然後 Visual Studio Code 自動列出上述要安裝的擴充套件在最上面。
+
+![](./images/macos_install/vscode_recommended_extensions_list.png)
+
+---
+
+### Optional: 安裝 R-markdown
+
+假如文件中有使用到 R-markdwon 語法，請安裝 R 和 R-markdown：
+
+1. 安裝 R 語言：使用 Homebrew 安裝 R 語言：<https://formulae.brew.sh/formula/r>
+
+   ```sh
+   brew install r
+   ```
+2. 安裝 R-markdown 套件：
+
+   ```sh
+   Rscript -e "install.packages('rmarkdown', repos = 'https://cloud.r-project.org')"
+   ```
+
+### Optional: 安裝 Jupyter Notebook
+
+假如文件中有使用到 Python Jupyter Notebook，安裝 Jupyter Notebook 的指令為：
+
+```sh
+python3 -m pip install --upgrade pip; python3 -m pip install Jupyter
+```
+
+### 驗證安裝是否成功
+
+在終端機 (Terminal) 輸入 `quarto check` 指令來驗證安裝是否成功：
+
+![](./images/macos_install/quarto_check.png)

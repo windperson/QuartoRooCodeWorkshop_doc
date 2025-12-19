@@ -1,0 +1,21 @@
+project:
+  type: website
+  resources:
+  - images/**
+
+website:
+  title: "用 VSCode + Roo Code 打造你的智慧 Quarto 文件"
+  navbar:
+    left:
+    - href: index.qmd
+      text: Home
+    - href: install-tools.qmd
+      text: 相關工具安裝說明
+
+format:
+  html:
+    theme:
+      light: cosmo
+      dark: darkly
+    css: styles.css
+    toc: true

@@ -1,0 +1,18 @@
+---
+title: "Install Tools"
+format: 
+  html:
+    page-layout: full
+---
+
+::: {.panel-tabset}
+
+# Windows
+
+{{< include "./install-tools_windows.qmd" >}}
+
+# macOS
+
+{{< include "./install-tools_macos.qmd" >}}
+
+:::
