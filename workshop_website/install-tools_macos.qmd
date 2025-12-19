@@ -171,3 +171,5 @@ python3 -m pip install --upgrade pip; python3 -m pip install Jupyter
 在終端機 (Terminal) 輸入 `quarto check` 指令來驗證安裝是否成功：
 
 ![](./images/macos_install/quarto_check.png)
+
+---

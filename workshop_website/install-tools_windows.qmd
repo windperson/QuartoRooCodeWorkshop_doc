@@ -87,3 +87,46 @@ scoop install extras/vscode
 可以按下 Install 直接安裝，或按 Show Recommendations 然後 Visual Studio Code 自動列出上述要安裝的擴充套件在最上面。
 
 ![](./images/windows_install/vscode_recommended_extensions_list.png)
+
+---
+
+### Optional: 安裝 R-markdown
+
+假如文件中有使用到 R-markdwon 語法，請安裝 R 和 R-markdown：
+
+1. 安裝 R 語言：使用 scoop 的 r-buc 安裝 R 語言：<https://github.com/cderv/r-bucket?tab=readme-ov-file#r-release-and-old-releases>
+
+   ```sh
+   scoop install r-bucket/r-release
+   ```
+2. 安裝 R-markdown 套件：
+
+   ```sh
+   Rscript -e "install.packages('rmarkdown', repos = 'https://cloud.r-project.org')"
+   ```
+
+### Optional: 安裝 Jupyter Notebook
+
+假如文件中有使用到 Jupyter Notebook，請安裝 Python 和 Jupyter Notebook：
+
+1. 安裝 Python：<https://scoop.sh/#/apps?q=python&id=2dcee5c280bcf909518d9074ed86f67c984f4db0>
+
+   ```sh
+   scoop install python
+   ```
+2. 安裝 Jupyter Notebook：
+
+   ```sh
+   python -m pip install --upgrade pip; python -m pip install Jupyter
+   ```
+   
+   :::{.callout-warning}
+   Windows ARM64 的電腦（ex: Surface Pro X）由於 Python 一些相依套件尚未支援 ARM64 架構，安裝 Jupyter Notebook 會失敗。
+   :::
+
+
+### 驗證安裝是否成功
+
+在命令列/Windows Terminal輸入 `quarto check` 指令來驗證安裝是否成功
+
+---
