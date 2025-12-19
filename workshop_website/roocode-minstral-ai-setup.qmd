@@ -18,7 +18,7 @@ API Provider 選擇 Minstral AI，然後在 API Key 欄位下方的 Get Mistral/
 
 ![](./images/setup_roocode_api_01.png)
 
-會開啟瀏覽器前往 Minstral AI 網站（），可使用幾種流行的 OAuth 認證來註冊帳號:
+會開啟瀏覽器前往 Minstral AI 網站（<https://console.mistral.ai/>），可使用幾種流行的 OAuth 認證來註冊帳號:
 
 ![](./images/setup_roocode_api_02.png)
 
