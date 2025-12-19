@@ -40,7 +40,7 @@ jobs:
     #       path: slides_src
     #       to: revealjs
 
-      - name: Render GitHub Pages demo website
+      - name: Render GitHub Pages website
         uses: quarto-dev/quarto-actions/render@v2
         with:
           path: workshop_website
