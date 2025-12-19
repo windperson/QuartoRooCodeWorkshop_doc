@@ -42,9 +42,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-24772959a0e306aba8d7698078628ce7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-0b37c64f34216b628666a8dac638b53b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-e7f4145358ce1d0cd37d8d374dbb44f9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-0b37c64f34216b628666a8dac638b53b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -281,7 +281,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#roo-code-擴充套件使用-minstral-ai-api-key-設定說明" id="toc-roo-code-擴充套件使用-minstral-ai-api-key-設定說明" class="nav-link active" data-scroll-target="#roo-code-擴充套件使用-minstral-ai-api-key-設定說明">Roo Code 擴充套件使用 Minstral AI API Key 設定說明</a></li>
+  <li><a href="#roo-code-擴充套件設定-ai-api-key" id="toc-roo-code-擴充套件設定-ai-api-key" class="nav-link active" data-scroll-target="#roo-code-擴充套件設定-ai-api-key">Roo Code 擴充套件設定 AI API Key</a>
+  <ul class="collapse">
+  <li><a href="#設定-minstral-ai-api-key-步驟" id="toc-設定-minstral-ai-api-key-步驟" class="nav-link" data-scroll-target="#設定-minstral-ai-api-key-步驟">設定 Minstral AI API Key 步驟</a></li>
+  <li><a href="#換用其他-ai-服務提供者的方法" id="toc-換用其他-ai-服務提供者的方法" class="nav-link" data-scroll-target="#換用其他-ai-服務提供者的方法">換用其他 AI 服務提供者的方法</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -292,10 +296,55 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="roo-code-擴充套件使用-minstral-ai-api-key-設定說明" class="level1">
-<h1>Roo Code 擴充套件使用 Minstral AI API Key 設定說明</h1>
+<section id="roo-code-擴充套件設定-ai-api-key" class="level1">
+<h1>Roo Code 擴充套件設定 AI API Key</h1>
+<p>Mistral AI 在最近推出一個在2025年底前可免費使用的程式碼生成模型 <a href="https://docs.mistral.ai/models/devstral-2-25-12">Devstral 2</a> : <a href="https://mistral.ai/news/devstral-2-vibe-cli" class="uri">https://mistral.ai/news/devstral-2-vibe-cli</a></p>
+<p>Roo Code 擴充套件也支援使用 Mistral AI 模型，官方說明：<a href="https://docs.roocode.com/providers/mistral" class="uri">https://docs.roocode.com/providers/mistral</a></p>
+<section id="設定-minstral-ai-api-key-步驟" class="level2">
+<h2 class="anchored" data-anchor-id="設定-minstral-ai-api-key-步驟">設定 Minstral AI API Key 步驟</h2>
+<p>Roo Code 擴充套件第一次打開時，會顯示如下畫面，選擇 Use another provider:</p>
+<p><img src="./images/setup_roocode_api_00.png" class="img-fluid"></p>
+<p>API Provider 選擇 Minstral AI，然後在 API Key 欄位下方的 Get Mistral/Codestral API Key 按鈕點下去：</p>
+<p><img src="./images/setup_roocode_api_01.png" class="img-fluid"></p>
+<p>會開啟瀏覽器前往 Minstral AI 網站（），可使用幾種流行的 OAuth 認證來註冊帳號:</p>
+<p><img src="./images/setup_roocode_api_02.png" class="img-fluid"></p>
+<p>註冊完成並登入後，選擇左上第三個 API Keys <a href="https://console.mistral.ai/home?workspace_dialog=apiKeys" class="uri">https://console.mistral.ai/home?workspace_dialog=apiKeys</a> 可建立 API Key：</p>
+<p><img src="./images/setup_roocode_api_03.png" class="img-fluid"></p>
+<p>建立 API Key 時第一次會問你要使用哪種 Plan，選擇左邊的 Free Plan 即可：</p>
+<p><img src="./images/setup_roocode_api_04.png" class="img-fluid"></p>
+<p>建立 API Key，Key Name名稱可任意輸入，然後按 Create new key：</p>
+<p><img src="./images/setup_roocode_api_05.png" class="img-fluid"></p>
+<p>建立完成時會顯示 API Key，記得一定要按 Copy key 複製起來存在安全的地方，否則之後就看不到完整的API Key內容了：</p>
+<p><img src="./images/setup_roocode_api_06.png" class="img-fluid"></p>
+<p>回到 Visual Studio Code 的 Roo Code 擴充套件設定畫面，將剛剛複製的 API Key 貼到 Minstral API Key 欄位，然後下方的 Model 選擇 <code>devstral-medium-latest</code>：</p>
+<p><img src="./images/setup_roocode_api_07.png" class="img-fluid"></p>
+<p>按下方的 Get started 按鈕，即可完成 Roo Code 擴充套件的 Minstral AI API Key 設定，然後應該就可以開始使用文字談話介面的功能開始互動：</p>
+<ol type="1">
+<li>按最左下角的按鈕，在開啟的選單中，選擇 AI Mode 為 Ask :<br><img src="./images/setup_roocode_api_08.png" class="img-fluid"></li>
+<li>在文字談話介面中輸入 <code>How recently knowledge have you trained?</code> 送出，應該會有如下圖的回應：<br><img src="./images/setup_roocode_api_09.png" class="img-fluid"><br>表示 Minstral AI 模型已經可以正常使用了。</li>
+</ol>
+</section>
+<section id="換用其他-ai-服務提供者的方法" class="level2">
+<h2 class="anchored" data-anchor-id="換用其他-ai-服務提供者的方法">換用其他 AI 服務提供者的方法</h2>
+<p>如果要換用其他 AI 服務提供者，在 Visual Studio Code 的 Roo Code 擴充套件畫面右上方第三個齒輪按鈕，然後選擇左邊第一個插頭分頁：</p>
+<p><img src="./images/roocode_change_ai_provider.png" class="img-fluid"></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Roo Code 支援的 AI 服務提供者，例如 Gemini、OpenAI、Anthropic 等等，請參考官方說明文件：<a href="https://docs.roocode.com/providers/" class="uri">https://docs.roocode.com/providers/</a></p>
+</div>
+</div>
+<hr>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -385,7 +434,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/windperson\.github\.io\/QuartoRooCodeWorkshop_doc\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
