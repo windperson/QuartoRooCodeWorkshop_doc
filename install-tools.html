@@ -423,6 +423,45 @@ Tip
 <p><img src="./images/windows_install/vscode_prompt_recommended_extensions.png" class="img-fluid"></p>
 <p>可以按下 Install 直接安裝，或按 Show Recommendations 然後 Visual Studio Code 自動列出上述要安裝的擴充套件在最上面。</p>
 <p><img src="./images/windows_install/vscode_recommended_extensions_list.png" class="img-fluid"></p>
+<hr>
+</section>
+<section id="optional-安裝-r-markdown" class="level3">
+<h3 class="anchored" data-anchor-id="optional-安裝-r-markdown">Optional: 安裝 R-markdown</h3>
+<p>假如文件中有使用到 R-markdwon 語法，請安裝 R 和 R-markdown：</p>
+<ol type="1">
+<li><p>安裝 R 語言：使用 scoop 的 r-buc 安裝 R 語言：<a href="https://github.com/cderv/r-bucket?tab=readme-ov-file#r-release-and-old-releases" class="uri">https://github.com/cderv/r-bucket?tab=readme-ov-file#r-release-and-old-releases</a></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">scoop</span> install r-bucket/r-release</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p>安裝 R-markdown 套件：</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Rscript</span> <span class="at">-e</span> <span class="st">"install.packages('rmarkdown', repos = 'https://cloud.r-project.org')"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+</ol>
+</section>
+<section id="optional-安裝-jupyter-notebook" class="level3">
+<h3 class="anchored" data-anchor-id="optional-安裝-jupyter-notebook">Optional: 安裝 Jupyter Notebook</h3>
+<p>假如文件中有使用到 Jupyter Notebook，請安裝 Python 和 Jupyter Notebook：</p>
+<ol type="1">
+<li><p>安裝 Python：<a href="https://scoop.sh/#/apps?q=python&amp;id=2dcee5c280bcf909518d9074ed86f67c984f4db0" class="uri">https://scoop.sh/#/apps?q=python&amp;id=2dcee5c280bcf909518d9074ed86f67c984f4db0</a></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">scoop</span> install python</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p>安裝 Jupyter Notebook：</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> pip install <span class="at">--upgrade</span> pip<span class="kw">;</span> <span class="ex">python</span> <span class="at">-m</span> pip install Jupyter</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Windows ARM64 的電腦（ex: Surface Pro X）由於 Python 一些相依套件尚未支援 ARM64 架構，安裝 Jupyter Notebook 會失敗。</p>
+</div>
+</div></li>
+</ol>
+</section>
+<section id="驗證安裝是否成功" class="level3">
+<h3 class="anchored" data-anchor-id="驗證安裝是否成功">驗證安裝是否成功</h3>
+<p>在命令列/Windows Terminal輸入 <code>quarto check</code> 指令來驗證安裝是否成功</p>
+<hr>
 </section>
 </section>
 </div>
@@ -456,11 +495,11 @@ Tip
 <ol type="1">
 <li><p>開啟終端機 (Terminal) 應用程式</p></li>
 <li><p>輸入以下指令來安裝 ：</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install git</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install git</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 <li><p>安裝完成後，輸入以下指令以便設定 git 的使用者名稱：</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"你的名字"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"你的名字"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>以及設定電子郵件地址：</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"你的電子郵件地址"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"你的電子郵件地址"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 </ol>
 <p>然後可以用 <code>git config --list</code> 指令來確認設定是否正確。</p>
 </section>
@@ -469,7 +508,7 @@ Tip
 <ol type="1">
 <li><p>開啟終端機 (Terminal) 應用程式</p></li>
 <li><p>輸入以下指令來安裝 ：</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">xcode-select</span> <span class="at">--install</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">xcode-select</span> <span class="at">--install</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 <li><p>會跳出一個視窗，點選「安裝」(Install) 按鈕，並同意授權條款 (Agree to the Terms of Service) 即可開始安裝。</p></li>
 </ol>
 </section>
@@ -479,7 +518,7 @@ Tip
 <ol type="1">
 <li><p>開啟終端機 (Terminal) 應用程式</p></li>
 <li><p>輸入以下指令來安裝 ：</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install <span class="at">--cask</span> quarto</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install <span class="at">--cask</span> quarto</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 <li><p>安裝中會提示你輸入sudo密碼，請輸入你的 macOS 使用者密碼以繼續安裝。<br> <img src="./images/macos_install/quarto_install_00.png" class="img-fluid"></p></li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -493,8 +532,8 @@ Tip
 </div>
 <div class="callout-body-container callout-body">
 <p>假如在文件中有使用到 mermaid 語法或需要輸出 PDF 文件，請在安裝完 Quarto 後，打開終端機 (Terminal) 並輸入下列兩個指令來安裝 Quarto 的衍生套件：</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> install chromium</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> install TinyTex</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> install chromium</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> install TinyTex</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><img src="./images/macos_install/quarto_install_tools.png" class="img-fluid"></p>
 <p>chromium 是 Quarto 的 mermaid 語法預覽圖需要，而 TinyTex 則是用來編譯 PDF 文件所需的 LaTeX 發行版。</p>
 </div>
@@ -506,7 +545,7 @@ Tip
 <ol type="1">
 <li><p>開啟終端機 (Terminal) 應用程式</p></li>
 <li><p>輸入以下指令來安裝 ：</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install <span class="at">--cask</span> google-chrome</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install <span class="at">--cask</span> google-chrome</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 </ol>
 </section>
 <section id="安裝-visual-studio-code-1" class="level3">
@@ -515,7 +554,7 @@ Tip
 <ol type="1">
 <li><p>開啟終端機 (Terminal) 應用程式</p></li>
 <li><p>輸入以下指令來安裝 ：</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install <span class="at">--cask</span> visual-studio-code</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install <span class="at">--cask</span> visual-studio-code</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -549,25 +588,26 @@ Tip
 <p><img src="./images/macos_install/vscode_recommended_extensions_list.png" class="img-fluid"></p>
 <hr>
 </section>
-<section id="optional-安裝-r-markdown" class="level3">
-<h3 class="anchored" data-anchor-id="optional-安裝-r-markdown">Optional: 安裝 R-markdown</h3>
+<section id="optional-安裝-r-markdown-1" class="level3">
+<h3 class="anchored" data-anchor-id="optional-安裝-r-markdown-1">Optional: 安裝 R-markdown</h3>
 <p>假如文件中有使用到 R-markdwon 語法，請安裝 R 和 R-markdown：</p>
 <ol type="1">
 <li><p>安裝 R 語言：使用 Homebrew 安裝 R 語言：<a href="https://formulae.brew.sh/formula/r" class="uri">https://formulae.brew.sh/formula/r</a></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install r</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install r</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 <li><p>安裝 R-markdown 套件：</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Rscript</span> <span class="at">-e</span> <span class="st">"install.packages('rmarkdown', repos = 'https://cloud.r-project.org')"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Rscript</span> <span class="at">-e</span> <span class="st">"install.packages('rmarkdown', repos = 'https://cloud.r-project.org')"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 </ol>
 </section>
-<section id="optional-安裝-jupyter-notebook" class="level3">
-<h3 class="anchored" data-anchor-id="optional-安裝-jupyter-notebook">Optional: 安裝 Jupyter Notebook</h3>
+<section id="optional-安裝-jupyter-notebook-1" class="level3">
+<h3 class="anchored" data-anchor-id="optional-安裝-jupyter-notebook-1">Optional: 安裝 Jupyter Notebook</h3>
 <p>假如文件中有使用到 Python Jupyter Notebook，安裝 Jupyter Notebook 的指令為：</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> pip install <span class="at">--upgrade</span> pip<span class="kw">;</span> <span class="ex">python3</span> <span class="at">-m</span> pip install Jupyter</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> pip install <span class="at">--upgrade</span> pip<span class="kw">;</span> <span class="ex">python3</span> <span class="at">-m</span> pip install Jupyter</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="驗證安裝是否成功" class="level3">
-<h3 class="anchored" data-anchor-id="驗證安裝是否成功">驗證安裝是否成功</h3>
+<section id="驗證安裝是否成功-1" class="level3">
+<h3 class="anchored" data-anchor-id="驗證安裝是否成功-1">驗證安裝是否成功</h3>
 <p>在終端機 (Terminal) 輸入 <code>quarto check</code> 指令來驗證安裝是否成功：</p>
 <p><img src="./images/macos_install/quarto_check.png" class="img-fluid"></p>
+<hr>
 </section>
 </section>
 </div>

@@ -325,6 +325,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#安裝-quarto-cli" id="toc-安裝-quarto-cli" class="nav-link" data-scroll-target="#安裝-quarto-cli">安裝 Quarto CLI</a></li>
   <li><a href="#安裝-visual-studio-code" id="toc-安裝-visual-studio-code" class="nav-link" data-scroll-target="#安裝-visual-studio-code">安裝 Visual Studio Code</a></li>
   <li><a href="#安裝-visual-studio-code-擴充套件" id="toc-安裝-visual-studio-code-擴充套件" class="nav-link" data-scroll-target="#安裝-visual-studio-code-擴充套件">安裝 Visual Studio Code 擴充套件</a></li>
+  <li><a href="#optional-安裝-r-markdown" id="toc-optional-安裝-r-markdown" class="nav-link" data-scroll-target="#optional-安裝-r-markdown">Optional: 安裝 R-markdown</a></li>
+  <li><a href="#optional-安裝-jupyter-notebook" id="toc-optional-安裝-jupyter-notebook" class="nav-link" data-scroll-target="#optional-安裝-jupyter-notebook">Optional: 安裝 Jupyter Notebook</a></li>
+  <li><a href="#驗證安裝是否成功" id="toc-驗證安裝是否成功" class="nav-link" data-scroll-target="#驗證安裝是否成功">驗證安裝是否成功</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -414,6 +417,45 @@ Tip
 <p><img src="./images/windows_install/vscode_prompt_recommended_extensions.png" class="img-fluid"></p>
 <p>可以按下 Install 直接安裝，或按 Show Recommendations 然後 Visual Studio Code 自動列出上述要安裝的擴充套件在最上面。</p>
 <p><img src="./images/windows_install/vscode_recommended_extensions_list.png" class="img-fluid"></p>
+<hr>
+</section>
+<section id="optional-安裝-r-markdown" class="level3">
+<h3 class="anchored" data-anchor-id="optional-安裝-r-markdown">Optional: 安裝 R-markdown</h3>
+<p>假如文件中有使用到 R-markdwon 語法，請安裝 R 和 R-markdown：</p>
+<ol type="1">
+<li><p>安裝 R 語言：使用 scoop 的 r-buc 安裝 R 語言：<a href="https://github.com/cderv/r-bucket?tab=readme-ov-file#r-release-and-old-releases" class="uri">https://github.com/cderv/r-bucket?tab=readme-ov-file#r-release-and-old-releases</a></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">scoop</span> install r-bucket/r-release</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p>安裝 R-markdown 套件：</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Rscript</span> <span class="at">-e</span> <span class="st">"install.packages('rmarkdown', repos = 'https://cloud.r-project.org')"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+</ol>
+</section>
+<section id="optional-安裝-jupyter-notebook" class="level3">
+<h3 class="anchored" data-anchor-id="optional-安裝-jupyter-notebook">Optional: 安裝 Jupyter Notebook</h3>
+<p>假如文件中有使用到 Jupyter Notebook，請安裝 Python 和 Jupyter Notebook：</p>
+<ol type="1">
+<li><p>安裝 Python：<a href="https://scoop.sh/#/apps?q=python&amp;id=2dcee5c280bcf909518d9074ed86f67c984f4db0" class="uri">https://scoop.sh/#/apps?q=python&amp;id=2dcee5c280bcf909518d9074ed86f67c984f4db0</a></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">scoop</span> install python</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p>安裝 Jupyter Notebook：</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> pip install <span class="at">--upgrade</span> pip<span class="kw">;</span> <span class="ex">python</span> <span class="at">-m</span> pip install Jupyter</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Windows ARM64 的電腦（ex: Surface Pro X）由於 Python 一些相依套件尚未支援 ARM64 架構，安裝 Jupyter Notebook 會失敗。</p>
+</div>
+</div></li>
+</ol>
+</section>
+<section id="驗證安裝是否成功" class="level3">
+<h3 class="anchored" data-anchor-id="驗證安裝是否成功">驗證安裝是否成功</h3>
+<p>在命令列/Windows Terminal輸入 <code>quarto check</code> 指令來驗證安裝是否成功</p>
+<hr>
 
 
 </section>
