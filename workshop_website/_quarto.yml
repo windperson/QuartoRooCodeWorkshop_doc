@@ -11,6 +11,8 @@ website:
       text: Home
     - href: install-tools.qmd
       text: 相關工具安裝說明
+    - href: roocode-minstral-ai-setup.qmd
+      text: Minstral AI Key 設定
 
 format:
   html:
