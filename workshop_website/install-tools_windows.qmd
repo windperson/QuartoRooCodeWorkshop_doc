@@ -41,7 +41,7 @@ scoop install quarto
 
 :::{.callout-tip}
 
-假如在文件中有使用到 mermaid 語法或需要輸出 PDF 文件，請在安裝完 Quarto 後，輸入下列兩個指令來安裝 Quarto 的衍生套件：
+假如在.qmd 文件中有使用到 mermaid 語法或需要輸出 PDF 文件，請在安裝完 Quarto 後，輸入下列兩個指令來安裝 Quarto 的衍生套件：
    
 ```sh
 quarto install chromium
