@@ -8,3 +8,8 @@ title: "Quarto Roo Code workshop"
 
 
 [Roo Code 擴充套件設定 Minstral AI API Key](./roocode-minstral-ai-setup.qmd)
+
+
+---
+
+[工作坊練習檔案GitHub](https://github.com/windperson/QuartoRooCodeWorkshop){target="_blank"}
