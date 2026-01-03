@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>install-tools_macos – 用 VSCode + Roo Code 打造你的智慧 Quarto 文件</title>
+<title>如何在 Roo Code 使用 VSCode 的內建 Markitdown MCP Server 功能 – 用 VSCode + Roo Code 打造你的智慧 Quarto 文件</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,41 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -320,173 +285,74 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#安裝工具-macos" id="toc-安裝工具-macos" class="nav-link active" data-scroll-target="#安裝工具-macos">安裝工具 (macOS)</a>
+  <li><a href="#安裝並啟動-vscode-的-markitdown-mcp-server" id="toc-安裝並啟動-vscode-的-markitdown-mcp-server" class="nav-link active" data-scroll-target="#安裝並啟動-vscode-的-markitdown-mcp-server">安裝並啟動 VSCode 的 Markitdown MCP Server</a>
   <ul class="collapse">
-  <li><a href="#安裝-git" id="toc-安裝-git" class="nav-link" data-scroll-target="#安裝-git">安裝 git</a></li>
-  <li><a href="#安裝-xcode-command-line-tools-假如系統未安裝xcode" id="toc-安裝-xcode-command-line-tools-假如系統未安裝xcode" class="nav-link" data-scroll-target="#安裝-xcode-command-line-tools-假如系統未安裝xcode">安裝 XCode Command Line Tools<br>（假如系統未安裝XCode）</a></li>
-  <li><a href="#安裝-quarto-cli" id="toc-安裝-quarto-cli" class="nav-link" data-scroll-target="#安裝-quarto-cli">安裝 Quarto CLI</a></li>
-  <li><a href="#安裝-google-chrome-瀏覽器-假如只有macos內建safari" id="toc-安裝-google-chrome-瀏覽器-假如只有macos內建safari" class="nav-link" data-scroll-target="#安裝-google-chrome-瀏覽器-假如只有macos內建safari">安裝 Google Chrome 瀏覽器<br>（假如只有macOS內建safari）</a></li>
-  <li><a href="#安裝-visual-studio-code" id="toc-安裝-visual-studio-code" class="nav-link" data-scroll-target="#安裝-visual-studio-code">安裝 Visual Studio Code</a></li>
-  <li><a href="#安裝-visual-studio-code-擴充套件" id="toc-安裝-visual-studio-code-擴充套件" class="nav-link" data-scroll-target="#安裝-visual-studio-code-擴充套件">安裝 Visual Studio Code 擴充套件</a></li>
-  <li><a href="#optional-安裝-r-markdown" id="toc-optional-安裝-r-markdown" class="nav-link" data-scroll-target="#optional-安裝-r-markdown">Optional: 安裝 R-markdown</a></li>
-  <li><a href="#optional-安裝-jupyter-notebook" id="toc-optional-安裝-jupyter-notebook" class="nav-link" data-scroll-target="#optional-安裝-jupyter-notebook">Optional: 安裝 Jupyter Notebook</a></li>
-  <li><a href="#驗證安裝是否成功" id="toc-驗證安裝是否成功" class="nav-link" data-scroll-target="#驗證安裝是否成功">驗證安裝是否成功</a></li>
+  <li><a href="#啟用-vscode-內建的-mcp-server-功能並安裝-markitdown-mcp-server" id="toc-啟用-vscode-內建的-mcp-server-功能並安裝-markitdown-mcp-server" class="nav-link" data-scroll-target="#啟用-vscode-內建的-mcp-server-功能並安裝-markitdown-mcp-server">啟用 VSCode 內建的 MCP Server 功能並安裝 Markitdown MCP Server</a></li>
+  <li><a href="#啟動-markitdown-mcp-server" id="toc-啟動-markitdown-mcp-server" class="nav-link" data-scroll-target="#啟動-markitdown-mcp-server">啟動 Markitdown MCP Server</a></li>
   </ul></li>
+  <li><a href="#在-roo-code-中設定使用-vscode-的-markitdown-mcp-server" id="toc-在-roo-code-中設定使用-vscode-的-markitdown-mcp-server" class="nav-link" data-scroll-target="#在-roo-code-中設定使用-vscode-的-markitdown-mcp-server">在 Roo Code 中設定使用 VSCode 的 Markitdown MCP Server</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">如何在 Roo Code 使用 VSCode 的內建 Markitdown MCP Server 功能</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
 
 
-<section id="安裝工具-macos" class="level2">
-<h2 class="anchored" data-anchor-id="安裝工具-macos">安裝工具 (macOS)</h2>
-<p>需要安裝的軟體有：</p>
-<ul>
-<li><a href="https://git-scm.com/install/mac">git</a></li>
-<li><a href="https://developer.apple.com/documentation/xcode/installing-the-command-line-tools#Install-the-Command-Line-Tools-package-in-Terminal">XCode Command Line Tools</a>（假如系統未安裝 XCode）</li>
-<li><a href="https://quarto.org/docs/get-started/">Quarto CLI</a></li>
-<li><a href="https://www.google.com/chrome/">Google Chrome 瀏覽器</a>（假如只有macOS內建 safari）</li>
-<li><a href="https://code.visualstudio.com/">Visual Studio Code</a><br>並安裝以下擴充套件 (Extensions)：
-<ul>
-<li><a href="https://marketplace.visualstudio.com/items?itemName=RooVeterinaryInc.roo-cline">Roo Code</a></li>
-<li><a href="https://marketplace.visualstudio.com/items?itemName=quarto.quarto">Quarto</a></li>
-<li><a href="https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig">EditorConfig for VS Code</a></li>
-<li><a href="https://marketplace.visualstudio.com/items?itemName=huizhou.githd">Git History Diff</a></li>
-</ul></li>
-</ul>
-<p>以下為 Optional 軟體，假如 .qmd 文件中有使用到 R-markdown 語法或 Python Jupyter Notebook 才須安裝：</p>
-<ul>
-<li><a href="https://rmarkdown.rstudio.com/">R-markdown</a></li>
-<li><a href="https://jupyter.org/">Jupyter Notebook</a></li>
-</ul>
-<p>建議使用 <a href="https://brew.sh/">Homebrew</a> 套件管理工具來安裝上述軟體。</p>
-<p>Homebrew 是 macOS 上非常流行的套件管理工具，可以方便地安裝、更新和管理各種軟體包。安裝和使用教學可以參考這篇：<a href="https://ithelp.ithome.com.tw/articles/10231649" class="uri">https://ithelp.ithome.com.tw/articles/10231649</a></p>
-<section id="安裝-git" class="level3">
-<h3 class="anchored" data-anchor-id="安裝-git">安裝 git</h3>
-<p>Homebrew 提供了 git 的安裝方式：<a href="https://formulae.brew.sh/formula/git" class="uri">https://formulae.brew.sh/formula/git</a></p>
-<ol type="1">
-<li><p>開啟終端機 (Terminal) 應用程式</p></li>
-<li><p>輸入以下指令來安裝 ：</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install git</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
-<li><p>安裝完成後，輸入以下指令以便設定 git 的使用者名稱：</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"你的名字"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>以及設定電子郵件地址：</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"你的電子郵件地址"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
-</ol>
-<p>然後可以用 <code>git config --list</code> 指令來確認設定是否正確。</p>
-</section>
-<section id="安裝-xcode-command-line-tools-假如系統未安裝xcode" class="level3">
-<h3 class="anchored" data-anchor-id="安裝-xcode-command-line-tools-假如系統未安裝xcode">安裝 XCode Command Line Tools<br>（假如系統未安裝XCode）</h3>
-<ol type="1">
-<li><p>開啟終端機 (Terminal) 應用程式</p></li>
-<li><p>輸入以下指令來安裝 ：</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">xcode-select</span> <span class="at">--install</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
-<li><p>會跳出一個視窗，點選「安裝」(Install) 按鈕，並同意授權條款 (Agree to the Terms of Service) 即可開始安裝。</p></li>
-</ol>
-</section>
-<section id="安裝-quarto-cli" class="level3">
-<h3 class="anchored" data-anchor-id="安裝-quarto-cli">安裝 Quarto CLI</h3>
-<p>Homebrew 提供了 Quarto 的安裝方式：<a href="https://formulae.brew.sh/cask/quarto" class="uri">https://formulae.brew.sh/cask/quarto</a></p>
-<ol type="1">
-<li><p>開啟終端機 (Terminal) 應用程式</p></li>
-<li><p>輸入以下指令來安裝 ：</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install <span class="at">--cask</span> quarto</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
-<li><p>安裝中會提示你輸入sudo密碼，請輸入你的 macOS 使用者密碼以繼續安裝。<br> <img src="./images/macos_install/quarto_install_00.png" class="img-fluid"></p></li>
-</ol>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>假如在文件中有使用到 mermaid 語法或需要輸出 PDF 文件，請在安裝完 Quarto 後，打開終端機 (Terminal) 並輸入下列兩個指令來安裝 Quarto 的衍生套件：</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> install chromium</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> install TinyTex</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><img src="./images/macos_install/quarto_install_tools.png" class="img-fluid"></p>
-<p>chromium 是 Quarto 的 mermaid 語法預覽圖需要，而 TinyTex 則是用來編譯 PDF 文件所需的 LaTeX 發行版。</p>
-</div>
-</div>
-</section>
-<section id="安裝-google-chrome-瀏覽器-假如只有macos內建safari" class="level3">
-<h3 class="anchored" data-anchor-id="安裝-google-chrome-瀏覽器-假如只有macos內建safari">安裝 Google Chrome 瀏覽器<br>（假如只有macOS內建safari）</h3>
-<p>Homebrew 提供了 Google Chrome 的安裝方式：<a href="https://formulae.brew.sh/cask/google-chrome" class="uri">https://formulae.brew.sh/cask/google-chrome</a></p>
-<ol type="1">
-<li><p>開啟終端機 (Terminal) 應用程式</p></li>
-<li><p>輸入以下指令來安裝 ：</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install <span class="at">--cask</span> google-chrome</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
-</ol>
-</section>
-<section id="安裝-visual-studio-code" class="level3">
-<h3 class="anchored" data-anchor-id="安裝-visual-studio-code">安裝 Visual Studio Code</h3>
-<p>Homebrew 提供了 Visual Studio Code 的安裝方式：<a href="https://formulae.brew.sh/cask/visual-studio-code" class="uri">https://formulae.brew.sh/cask/visual-studio-code</a></p>
-<ol type="1">
-<li><p>開啟終端機 (Terminal) 應用程式</p></li>
-<li><p>輸入以下指令來安裝 ：</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install <span class="at">--cask</span> visual-studio-code</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
-</ol>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>安裝完畢後，可<a href="https://code.visualstudio.com/docs/configure/custom-layout#_secondary-side-bar">設定原本 Visual Studio Code 內建的 GitHub Copilot chat 介面不要每次都跑出來</a>：</p>
-<ol type="1">
-<li>開啟 Visual Studio Code 應用程式</li>
-<li>選擇 Settings :<br><img src="./images/macos_install/open_vscode_settings.png" class="img-fluid"></li>
-<li>在搜尋欄輸入 <code>workbench.secondarySideBar.defaultVisibility</code> ，然後出現的設定下拉選單，選擇 <strong>hidden</strong> ：<br><img src="./images/macos_install/vscode_hide_secondary_sidebar.png" class="img-fluid"></li>
-</ol>
-</div>
-</div>
-</section>
-<section id="安裝-visual-studio-code-擴充套件" class="level3">
-<h3 class="anchored" data-anchor-id="安裝-visual-studio-code-擴充套件">安裝 Visual Studio Code 擴充套件</h3>
-<p>最快的方法是下載這個 GitHub Respository 的 <code>0-init</code> Release 壓縮檔:</p>
-<p><a href="https://github.com/windperson/QuartoRooCodeWorkshop/releases/tag/0-init" class="uri">https://github.com/windperson/QuartoRooCodeWorkshop/releases/tag/0-init</a></p>
-<p><img src="./images/macos_install/download_workshop_release_0.png" class="img-fluid"></p>
-<p>解壓縮後，在 Visual Studio Code 中開啟解壓縮後的資料夾:</p>
-<p><img src="./images/macos_install/vscode_open_workshop_folder.png" class="img-fluid"></p>
-<p>然後右下角會跳出提示，詢問是否要安裝推薦的擴充套件:</p>
-<p><img src="./images/macos_install/vscode_prompt_recommended_extensions.png" class="img-fluid"></p>
-<p>可以按下 Install 直接安裝，或按 Show Recommendations 然後 Visual Studio Code 自動列出上述要安裝的擴充套件在最上面。</p>
-<p><img src="./images/macos_install/vscode_recommended_extensions_list.png" class="img-fluid"></p>
-<hr>
-</section>
-<section id="optional-安裝-r-markdown" class="level3">
-<h3 class="anchored" data-anchor-id="optional-安裝-r-markdown">Optional: 安裝 R-markdown</h3>
-<p>假如文件中有使用到 R-markdwon 語法，請安裝 R 和 R-markdown：</p>
-<ol type="1">
-<li><p>安裝 R 語言：使用 Homebrew 安裝 R 語言：<a href="https://formulae.brew.sh/formula/r" class="uri">https://formulae.brew.sh/formula/r</a></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install r</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
-<li><p>安裝 R-markdown 套件：</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Rscript</span> <span class="at">-e</span> <span class="st">"install.packages('rmarkdown', repos = 'https://cloud.r-project.org')"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
-</ol>
-</section>
-<section id="optional-安裝-jupyter-notebook" class="level3">
-<h3 class="anchored" data-anchor-id="optional-安裝-jupyter-notebook">Optional: 安裝 Jupyter Notebook</h3>
-<p>假如文件中有使用到 Python Jupyter Notebook，安裝 Jupyter Notebook 的指令為：</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> pip install <span class="at">--upgrade</span> pip<span class="kw">;</span> <span class="ex">python3</span> <span class="at">-m</span> pip install Jupyter</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="驗證安裝是否成功" class="level3">
-<h3 class="anchored" data-anchor-id="驗證安裝是否成功">驗證安裝是否成功</h3>
-<p>在終端機 (Terminal) 輸入 <code>quarto check</code> 指令來驗證安裝是否成功：</p>
-<p><img src="./images/macos_install/quarto_check.png" class="img-fluid"></p>
-<hr>
+</header>
 
 
+<p>VSCode 在<a href="https://code.visualstudio.com/updates/v1_102#_mcp-support-in-vs-code-is-generally-available" target="_blank">1.102 版本內建跑 MCP Server 功能</a>，可以使用<a href="https://github.com/mcp/microsoft/markitdown" target="_blank">Marktplace 功能直接在 VSCode 內安裝＆跑 Markitdown MCP Server</a>，給內建的 GithHub Copilot Chat AI 模型使用。</p>
+<p>而由於<a href="https://docs.roocode.com/features/mcp/overview" target="_blank">Roo Code 也支援呼叫 MCP Server 功能</a>，所以我們也可以在 Roo Code 內做好相關設定，讓 Roo Code 配套的 LLM AI 模型去呼叫 VSCode 的 Markitdown MCP Server，而不僅僅專屬於 GitHub Copilot Chat 獨佔使用。</p>
+<section id="安裝並啟動-vscode-的-markitdown-mcp-server" class="level2">
+<h2 class="anchored" data-anchor-id="安裝並啟動-vscode-的-markitdown-mcp-server">安裝並啟動 VSCode 的 Markitdown MCP Server</h2>
+<section id="啟用-vscode-內建的-mcp-server-功能並安裝-markitdown-mcp-server" class="level3">
+<h3 class="anchored" data-anchor-id="啟用-vscode-內建的-mcp-server-功能並安裝-markitdown-mcp-server">啟用 VSCode 內建的 MCP Server 功能並安裝 Markitdown MCP Server</h3>
+<p>雖然 VSCode 內建 MCP Server 功能，但由於資安考量，預設是沒有啟用直接從<a href="https://github.com/mcp" target="_blank">GitHub MCP Server Registry</a>安裝，所以我們需要先<a href="https://code.visualstudio.com/docs/copilot/customization/mcp-servers#_add-an-mcp-server-from-the-github-mcp-server-registry" target="_blank">在 VSCode 的設定中啟用</a>，或在擴充套件安裝側邊欄介面中啟用：</p>
+<ol type="1">
+<li>在 VSCode 側邊欄選擇 Extensions (擴充套件) 圖示時，最下方的 <strong>MCP SERVERS</strong> 介面，展開預設是空的，並且沒有任何滑鼠/鍵盤選單可以操作:<br><img src="./images/mcp/vscode_default_mcp_server_UI.png" class="img-fluid"></li>
+<li>在最上方的搜尋欄輸入 <code>@mcp</code> ，這時會出現詢問是否要啟用 MCP Server Marketplace 的UI提示，按下方的 “Enable MCP Marketplace” 按鈕:<br><img src="./images/mcp/vscode_enable_mcp_marketplace_01.png" class="img-fluid"><br>接著會跳出確認視窗，按下 “Enable” 按鈕:<br><img src="./images/mcp/vscode_enable_mcp_marketplace_02.png" class="img-fluid"></li>
+<li>啟用後，此時 VSCode 左側的擴充套件側邊欄UI會顯示各種可安裝的 MCP Server 清單，繼續在上方的搜尋欄輸入英文字 <code>markitdown</code> ，就會出現 Markitdown MCP Server 擴充套件，按下 “Install” 按鈕安裝:<br><img src="./images/mcp/vscode_install_markitdown_mcp_extension.png" class="img-fluid"></li>
+<li>安裝完畢後，會在 MCP SERVERS 介面看到 Markitdown MCP Server 已經安裝完成:<br><img src="./images/mcp/vscode_markitdown_mcp_installed.png" class="img-fluid"></li>
+</ol>
 </section>
+<section id="啟動-markitdown-mcp-server" class="level3">
+<h3 class="anchored" data-anchor-id="啟動-markitdown-mcp-server">啟動 Markitdown MCP Server</h3>
+<ol type="1">
+<li>安裝 Markitdown MCP Server 完成後，在 MCP SERVERS 介面中，在 Markitdown 項目按滑鼠右鍵或是滑鼠左鍵點選右下角齒輪圖示開啟功能選單，選擇 “Start” 以啟動 Markitdown MCP Server:<br><img src="./images/mcp/vscode_start_markitdown_mcp_server.png" class="img-fluid"></li>
+<li>注意，此時如果你的電腦環境沒有安裝<a href="https://docs.astral.sh/uv/" target="_blank">uv</a>這個 Python 新的套件管理程式的話，會跳出提示視窗詢問你是否要安裝 uv，按下右側的 “Install” 按鈕:<br><img src="./images/mcp/vscode_start_markitdown_mcp_server_failed_no_uv_installed.png" class="img-fluid"><br>然後其實會根據你使用的作業系統，自動幫你安裝 uv ，或是跳出<a href="https://docs.astral.sh/uv/getting-started/installation/" target="_blank">uv 官方的安裝說明頁面</a>，依照指示安裝 uv 即可。</li>
+<li>安裝完 uv 後，再次在 MCP SERVERS 介面中，在 Markitdown 項目按滑鼠右鍵或是滑鼠左鍵點選右下角齒輪圖示開啟功能選單，選擇 “Start” 以啟動 Markitdown MCP Server，這次在 VSCode 自動導引 uv 安裝 Markitdown 需要的套件之後應會成功啟動，並且在下方的 Output (輸出) 視窗中看到 Markitdown MCP Server 的 <code>[info]  Connection state: Running</code> 成功啟動log訊息：<br><img src="./images/mcp/vscode_markitdown_mcp_server_started_successfully.png" class="img-fluid"><br>如果如圖所示有看到 ffmpeg 的相關訊息，如果沒有需要用到 Markitdown 的語音轉文字功能的話，基本上此時 MCP Server 已經是可以正常運作了，可以不必安裝 ffmpeg。</li>
+</ol>
+</section>
+</section>
+<section id="在-roo-code-中設定使用-vscode-的-markitdown-mcp-server" class="level2">
+<h2 class="anchored" data-anchor-id="在-roo-code-中設定使用-vscode-的-markitdown-mcp-server">在 Roo Code 中設定使用 VSCode 的 Markitdown MCP Server</h2>
+<p>在 VSCode 成功啟動 Markitdown MCP Server 後，接著我們要在 Roo Code 中設定使用這個 MCP Server：</p>
+<ol type="1">
+<li>在 Markitdown MCP Server 啟動成功後，在 VSCode 的 MCP SERVERS 介面中，按滑鼠右鍵或是滑鼠左鍵點選右下角齒輪圖示開啟功能選單，選擇 “Show Configuration (SJON)”：<br><img src="./images/mcp/vscode_show_markitdown_mcp_server_configuration.png" class="img-fluid"></li>
+<li>這時會打開一個新的 VSCode 編輯視窗，裡面是 Markitdown MCP Server 的設定檔內容，複製 <code>servers: {}</code> 區塊的內容:<br><img src="./images/mcp/vscode_markitdown_mcp_server_configuration_content.png" class="img-fluid"></li>
+<li>接著打開 Roo Code 設定 MCP 的介面，選擇 “Edit Project MCP” 按鈕:<br><img src="./images/mcp/create_roo_code_project_mcp_setting.png" class="img-fluid"></li>
+<li>此時會建立在專案目錄下 .roo 目錄內的 <strong><em>mcp.json</em></strong> 檔案，並且 VSCode 會自動開啟之，將剛剛複製的 Markitdown MCP Server 設定內容貼上:<br><img src="./images/mcp/roo_code_project_set_markitdown_mcp.png" class="img-fluid"><br>然後存檔關閉此檔案。</li>
+</ol>
+<p>之後就可以在 Roo Code 中讓 Roo Code 配套的 LLM AI 模型去呼叫 VSCode 的 Markitdown MCP Server 了。</p>
+<p>例如以下是使用 Roo Code 設定使用 Mistral AI 模型，並且透過 Markitdown MCP Server 去轉換一個 .docx 報價單檔案後，可成功展示報價單表格的範例：<br><img src="./images/roo_code_call_mcp_convert_docx_to_qmd.png" class="img-fluid"></p>
+
+
 </section>
 
 </main> <!-- /main -->

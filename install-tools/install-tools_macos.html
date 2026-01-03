@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Quarto Roo Code workshop – 用 VSCode + Roo Code 打造你的智慧 Quarto 文件</title>
+<title>install-tools_macos – 用 VSCode + Roo Code 打造你的智慧 Quarto 文件</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,31 +20,66 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-0b37c64f34216b628666a8dac638b53b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-e7f4145358ce1d0cd37d8d374dbb44f9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-0b37c64f34216b628666a8dac638b53b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-0b37c64f34216b628666a8dac638b53b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-e7f4145358ce1d0cd37d8d374dbb44f9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-0b37c64f34216b628666a8dac638b53b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -74,7 +109,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -246,7 +281,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">用 VSCode + Roo Code 打造你的智慧 Quarto 文件</span>
     </a>
   </div>
@@ -257,15 +292,15 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./install-tools.html"> 
+    <a class="nav-link" href="../install-tools.html"> 
 <span class="menu-text">相關工具安裝說明</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./roocode-minstral-ai-setup.html"> 
+    <a class="nav-link" href="../roocode-minstral-ai-setup.html"> 
 <span class="menu-text">Minstral AI Key 設定</span></a>
   </li>  
 </ul>
@@ -280,40 +315,182 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#安裝工具-macos" id="toc-安裝工具-macos" class="nav-link active" data-scroll-target="#安裝工具-macos">安裝工具 (macOS)</a>
+  <ul class="collapse">
+  <li><a href="#安裝-git" id="toc-安裝-git" class="nav-link" data-scroll-target="#安裝-git">安裝 git</a></li>
+  <li><a href="#安裝-xcode-command-line-tools-假如系統未安裝xcode" id="toc-安裝-xcode-command-line-tools-假如系統未安裝xcode" class="nav-link" data-scroll-target="#安裝-xcode-command-line-tools-假如系統未安裝xcode">安裝 XCode Command Line Tools<br>（假如系統未安裝XCode）</a></li>
+  <li><a href="#安裝-quarto-cli" id="toc-安裝-quarto-cli" class="nav-link" data-scroll-target="#安裝-quarto-cli">安裝 Quarto CLI</a></li>
+  <li><a href="#安裝-google-chrome-瀏覽器-假如只有macos內建safari" id="toc-安裝-google-chrome-瀏覽器-假如只有macos內建safari" class="nav-link" data-scroll-target="#安裝-google-chrome-瀏覽器-假如只有macos內建safari">安裝 Google Chrome 瀏覽器<br>（假如只有macOS內建safari）</a></li>
+  <li><a href="#安裝-visual-studio-code" id="toc-安裝-visual-studio-code" class="nav-link" data-scroll-target="#安裝-visual-studio-code">安裝 Visual Studio Code</a></li>
+  <li><a href="#安裝-visual-studio-code-擴充套件" id="toc-安裝-visual-studio-code-擴充套件" class="nav-link" data-scroll-target="#安裝-visual-studio-code-擴充套件">安裝 Visual Studio Code 擴充套件</a></li>
+  </ul></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"><img src="../images/macos_install/vscode_recommended_extensions_list.png" class="img-fluid"></a>
+  <ul class="collapse">
+  <li><a href="#optional-安裝-r-markdown" id="toc-optional-安裝-r-markdown" class="nav-link" data-scroll-target="#optional-安裝-r-markdown">Optional: 安裝 R-markdown</a></li>
+  <li><a href="#optional-安裝-jupyter-notebook" id="toc-optional-安裝-jupyter-notebook" class="nav-link" data-scroll-target="#optional-安裝-jupyter-notebook">Optional: 安裝 Jupyter Notebook</a></li>
+  <li><a href="#驗證安裝是否成功" id="toc-驗證安裝是否成功" class="nav-link" data-scroll-target="#驗證安裝是否成功">驗證安裝是否成功</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Quarto Roo Code workshop</h1>
+
+
+
+<section id="安裝工具-macos" class="level2">
+<h2 class="anchored" data-anchor-id="安裝工具-macos">安裝工具 (macOS)</h2>
+<p>需要安裝的軟體有：</p>
+<ul>
+<li><a href="https://git-scm.com/install/mac">git</a></li>
+<li><a href="https://developer.apple.com/documentation/xcode/installing-the-command-line-tools#Install-the-Command-Line-Tools-package-in-Terminal">XCode Command Line Tools</a>（假如系統未安裝 XCode）</li>
+<li><a href="https://quarto.org/docs/get-started/">Quarto CLI</a></li>
+<li><a href="https://www.google.com/chrome/">Google Chrome 瀏覽器</a>（假如只有macOS內建 safari）</li>
+<li><a href="https://code.visualstudio.com/">Visual Studio Code</a><br>並安裝以下擴充套件 (Extensions)：
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=RooVeterinaryInc.roo-cline">Roo Code</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=quarto.quarto">Quarto</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig">EditorConfig for VS Code</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=huizhou.githd">Git History Diff</a></li>
+</ul></li>
+</ul>
+<p>以下為 Optional 軟體，假如 .qmd 文件中有使用到 R-markdown 語法或 Python Jupyter Notebook 才須安裝：</p>
+<ul>
+<li><a href="https://rmarkdown.rstudio.com/">R-markdown</a></li>
+<li><a href="https://jupyter.org/">Jupyter Notebook</a></li>
+</ul>
+<p>建議使用 <a href="https://brew.sh/">Homebrew</a> 套件管理工具來安裝上述軟體。</p>
+<p>Homebrew 是 macOS 上非常流行的套件管理工具，可以方便地安裝、更新和管理各種軟體包。安裝和使用教學可以參考這篇：<a href="https://ithelp.ithome.com.tw/articles/10231649" class="uri">https://ithelp.ithome.com.tw/articles/10231649</a></p>
+<section id="安裝-git" class="level3">
+<h3 class="anchored" data-anchor-id="安裝-git">安裝 git</h3>
+<p>Homebrew 提供了 git 的安裝方式：<a href="https://formulae.brew.sh/formula/git" class="uri">https://formulae.brew.sh/formula/git</a></p>
+<ol type="1">
+<li><p>開啟終端機 (Terminal) 應用程式</p></li>
+<li><p>輸入以下指令來安裝 ：</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install git</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p>安裝完成後，輸入以下指令以便設定 git 的使用者名稱：</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"你的名字"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>以及設定電子郵件地址：</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"你的電子郵件地址"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+</ol>
+<p>然後可以用 <code>git config --list</code> 指令來確認設定是否正確。</p>
+</section>
+<section id="安裝-xcode-command-line-tools-假如系統未安裝xcode" class="level3">
+<h3 class="anchored" data-anchor-id="安裝-xcode-command-line-tools-假如系統未安裝xcode">安裝 XCode Command Line Tools<br>（假如系統未安裝XCode）</h3>
+<ol type="1">
+<li><p>開啟終端機 (Terminal) 應用程式</p></li>
+<li><p>輸入以下指令來安裝 ：</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">xcode-select</span> <span class="at">--install</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p>會跳出一個視窗，點選「安裝」(Install) 按鈕，並同意授權條款 (Agree to the Terms of Service) 即可開始安裝。</p></li>
+</ol>
+</section>
+<section id="安裝-quarto-cli" class="level3">
+<h3 class="anchored" data-anchor-id="安裝-quarto-cli">安裝 Quarto CLI</h3>
+<p>Homebrew 提供了 Quarto 的安裝方式：<a href="https://formulae.brew.sh/cask/quarto" class="uri">https://formulae.brew.sh/cask/quarto</a></p>
+<ol type="1">
+<li><p>開啟終端機 (Terminal) 應用程式</p></li>
+<li><p>輸入以下指令來安裝 ：</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install <span class="at">--cask</span> quarto</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p>安裝中會提示你輸入sudo密碼，請輸入你的 macOS 使用者密碼以繼續安裝。<br> <img src="../images/macos_install/quarto_install_00.png" class="img-fluid"></p></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-
-
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<p><a href="./install-tools/install-tools_windows.html">Windows 相關工具安裝</a></p>
-<p><a href="./install-tools/install-tools_macos.html">macOS 相關工具安裝</a></p>
-<p><a href="./roocode-minstral-ai-setup.html">Roo Code 擴充套件設定 Minstral AI API Key</a></p>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>假如在文件中有使用到 mermaid 語法或需要輸出 PDF 文件，請在安裝完 Quarto 後，打開終端機 (Terminal) 並輸入下列兩個指令來安裝 Quarto 的衍生套件：</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> install chromium</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> install TinyTex</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><img src="../images/macos_install/quarto_install_tools.png" class="img-fluid"></p>
+<p>chromium 是 Quarto 的 mermaid 語法預覽圖需要，而 TinyTex 則是用來編譯 PDF 文件所需的 LaTeX 發行版。</p>
+</div>
+</div>
+</section>
+<section id="安裝-google-chrome-瀏覽器-假如只有macos內建safari" class="level3">
+<h3 class="anchored" data-anchor-id="安裝-google-chrome-瀏覽器-假如只有macos內建safari">安裝 Google Chrome 瀏覽器<br>（假如只有macOS內建safari）</h3>
+<p>Homebrew 提供了 Google Chrome 的安裝方式：<a href="https://formulae.brew.sh/cask/google-chrome" class="uri">https://formulae.brew.sh/cask/google-chrome</a></p>
+<ol type="1">
+<li><p>開啟終端機 (Terminal) 應用程式</p></li>
+<li><p>輸入以下指令來安裝 ：</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install <span class="at">--cask</span> google-chrome</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+</ol>
+</section>
+<section id="安裝-visual-studio-code" class="level3">
+<h3 class="anchored" data-anchor-id="安裝-visual-studio-code">安裝 Visual Studio Code</h3>
+<p>Homebrew 提供了 Visual Studio Code 的安裝方式：<a href="https://formulae.brew.sh/cask/visual-studio-code" class="uri">https://formulae.brew.sh/cask/visual-studio-code</a></p>
+<ol type="1">
+<li><p>開啟終端機 (Terminal) 應用程式</p></li>
+<li><p>輸入以下指令來安裝 ：</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install <span class="at">--cask</span> visual-studio-code</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>安裝完畢後，可<a href="https://code.visualstudio.com/docs/configure/custom-layout#_secondary-side-bar">設定原本 Visual Studio Code 內建的 GitHub Copilot chat 介面不要每次都跑出來</a>：</p>
+<ol type="1">
+<li>開啟 Visual Studio Code 應用程式</li>
+<li>選擇 Settings :<br><img src="../images/macos_install/open_vscode_settings.png" class="img-fluid"></li>
+<li>在搜尋欄輸入 <code>workbench.secondarySideBar.defaultVisibility</code> ，然後出現的設定下拉選單，選擇 <strong>hidden</strong> ：<br><img src="../images/macos_install/vscode_hide_secondary_sidebar.png" class="img-fluid"></li>
+</ol>
+</div>
+</div>
+</section>
+<section id="安裝-visual-studio-code-擴充套件" class="level3">
+<h3 class="anchored" data-anchor-id="安裝-visual-studio-code-擴充套件">安裝 Visual Studio Code 擴充套件</h3>
+<p>最快的方法是下載這個 GitHub Respository 的 <code>0-init</code> Release 壓縮檔:</p>
+<p><a href="https://github.com/windperson/QuartoRooCodeWorkshop/releases/tag/0-init" class="uri">https://github.com/windperson/QuartoRooCodeWorkshop/releases/tag/0-init</a></p>
+<p><img src="../images/macos_install/download_workshop_release_0.png" class="img-fluid"></p>
+<p>解壓縮後，在 Visual Studio Code 中開啟解壓縮後的資料夾:</p>
+<p><img src="../images/macos_install/vscode_open_workshop_folder.png" class="img-fluid"> 然後右下角會跳出提示，詢問是否要安裝推薦的擴充套件:</p>
+<p><img src="../images/macos_install/vscode_prompt_recommended_extensions.png" class="img-fluid"></p>
+<p>可以按下 Install 直接安裝，或按 Show Recommendations 然後 Visual Studio Code 自動列出上述要安裝的擴充套件在最上面。</p>
+</section>
+</section>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"><img src="../images/macos_install/vscode_recommended_extensions_list.png" class="img-fluid"></h2>
+<section id="optional-安裝-r-markdown" class="level3">
+<h3 class="anchored" data-anchor-id="optional-安裝-r-markdown">Optional: 安裝 R-markdown</h3>
+<p>假如文件中有使用到 R-markdwon 語法，請安裝 R 和 R-markdown：</p>
+<ol type="1">
+<li><p>安裝 R 語言：使用 Homebrew 安裝 R 語言：<a href="https://formulae.brew.sh/formula/r" class="uri">https://formulae.brew.sh/formula/r</a></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install r</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p>安裝 R-markdown 套件：</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Rscript</span> <span class="at">-e</span> <span class="st">"install.packages('rmarkdown', repos = 'https://cloud.r-project.org')"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+</ol>
+</section>
+<section id="optional-安裝-jupyter-notebook" class="level3">
+<h3 class="anchored" data-anchor-id="optional-安裝-jupyter-notebook">Optional: 安裝 Jupyter Notebook</h3>
+<p>假如文件中有使用到 Python Jupyter Notebook，安裝 Jupyter Notebook 的指令為：</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> pip install <span class="at">--upgrade</span> pip<span class="kw">;</span> <span class="ex">python3</span> <span class="at">-m</span> pip install Jupyter</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="驗證安裝是否成功" class="level3">
+<h3 class="anchored" data-anchor-id="驗證安裝是否成功">驗證安裝是否成功</h3>
+<p>在終端機 (Terminal) 輸入 <code>quarto check</code> 指令來驗證安裝是否成功：</p>
+<p><img src="../images/macos_install/quarto_check.png" class="img-fluid"></p>
 <hr>
-<p><a href="https://github.com/windperson/QuartoRooCodeWorkshop" target="_blank">工作坊練習檔案GitHub</a></p>
-<p><a href="./roocode-vscode-markitdown-mcp.html" target="_blank">如何在 Roo Code 使用 VSCode 的內建 Markitdown MCP Server 功能</a></p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

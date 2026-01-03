@@ -371,7 +371,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">scoop</span> bucket add r-bucket https://github.com/cderv/r-bucket.git</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">scoop</span> install quarto</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>假如在一開始加入 r-bucket 時出現如下錯誤訊息，請先執行 <code>scoop install git</code> 指令安裝 git，再重新執行加入 r-bucket 的指令。</p>
-<p><img src="./images/windows_install/scoop_add_r_bucket_error.png" class="img-fluid"></p>
+<p><img src="../images/windows_install/scoop_add_r_bucket_error.png" class="img-fluid"></p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -385,7 +385,7 @@ Tip
 <p>假如在.qmd 文件中有使用到 mermaid 語法或需要輸出 PDF 文件，請在安裝完 Quarto 後，輸入下列兩個指令來安裝 Quarto 的衍生套件：</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> install chromium</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> install TinyTex</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><img src="./images/windows_install/quarto_install_tools.png" class="img-fluid"></p>
+<p><img src="../images/windows_install/quarto_install_tools.png" class="img-fluid"></p>
 <p>chromium 是 Quarto 的 mermaid 語法預覽圖需要，而 TinyTex 則是用來編譯 PDF 文件所需的 LaTeX 發行版。</p>
 </div>
 </div>
@@ -408,8 +408,8 @@ Tip
 <p>安裝完畢後，可<a href="https://code.visualstudio.com/docs/configure/custom-layout#_secondary-side-bar">設定原本 Visual Studio Code 內建的 GitHub Copilot chat 介面不要每次都跑出來</a>：</p>
 <ol type="1">
 <li>開啟 Visual Studio Code 應用程式</li>
-<li>選擇 Settings :<br><img src="./images/windows_install/open_vscode_settings.png" class="img-fluid"></li>
-<li>在搜尋欄輸入 <code>workbench.secondarySideBar.defaultVisibility</code> ，然後出現的設定下拉選單，選擇 <strong>hidden</strong> ：<br><img src="./images/windows_install/vscode_hide_secondary_sidebar.png" class="img-fluid"></li>
+<li>選擇 Settings :<br><img src="../images/windows_install/open_vscode_settings.png" class="img-fluid"></li>
+<li>在搜尋欄輸入 <code>workbench.secondarySideBar.defaultVisibility</code> ，然後出現的設定下拉選單，選擇 <strong>hidden</strong> ：<br><img src="../images/windows_install/vscode_hide_secondary_sidebar.png" class="img-fluid"></li>
 </ol>
 </div>
 </div>
@@ -418,11 +418,11 @@ Tip
 <h3 class="anchored" data-anchor-id="安裝-visual-studio-code-擴充套件">安裝 Visual Studio Code 擴充套件</h3>
 <p>最快的方法是下載這個 GitHub Respository 的 <code>0-init</code> Release 壓縮檔:</p>
 <p><a href="https://github.com/windperson/QuartoRooCodeWorkshop/releases/tag/0-init" class="uri">https://github.com/windperson/QuartoRooCodeWorkshop/releases/tag/0-init</a></p>
-<p><img src="./images/windows_install/download_workshop_release_0.png" class="img-fluid"></p>
+<p><img src="../images/windows_install/download_workshop_release_0.png" class="img-fluid"></p>
 <p>解壓縮後，在 Visual Studio Code 中開啟解壓縮後的資料夾，右下角會跳出提示，詢問是否要安裝推薦的擴充套件:</p>
-<p><img src="./images/windows_install/vscode_prompt_recommended_extensions.png" class="img-fluid"></p>
+<p><img src="../images/windows_install/vscode_prompt_recommended_extensions.png" class="img-fluid"></p>
 <p>可以按下 Install 直接安裝，或按 Show Recommendations 然後 Visual Studio Code 自動列出上述要安裝的擴充套件在最上面。</p>
-<p><img src="./images/windows_install/vscode_recommended_extensions_list.png" class="img-fluid"></p>
+<p><img src="../images/windows_install/vscode_recommended_extensions_list.png" class="img-fluid"></p>
 <hr>
 </section>
 <section id="optional-安裝-r-markdown" class="level3">
@@ -519,7 +519,7 @@ Warning
 <li><p>開啟終端機 (Terminal) 應用程式</p></li>
 <li><p>輸入以下指令來安裝 ：</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install <span class="at">--cask</span> quarto</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
-<li><p>安裝中會提示你輸入sudo密碼，請輸入你的 macOS 使用者密碼以繼續安裝。<br> <img src="./images/macos_install/quarto_install_00.png" class="img-fluid"></p></li>
+<li><p>安裝中會提示你輸入sudo密碼，請輸入你的 macOS 使用者密碼以繼續安裝。<br> <img src="../images/macos_install/quarto_install_00.png" class="img-fluid"></p></li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -534,7 +534,7 @@ Tip
 <p>假如在文件中有使用到 mermaid 語法或需要輸出 PDF 文件，請在安裝完 Quarto 後，打開終端機 (Terminal) 並輸入下列兩個指令來安裝 Quarto 的衍生套件：</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> install chromium</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> install TinyTex</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><img src="./images/macos_install/quarto_install_tools.png" class="img-fluid"></p>
+<p><img src="../images/macos_install/quarto_install_tools.png" class="img-fluid"></p>
 <p>chromium 是 Quarto 的 mermaid 語法預覽圖需要，而 TinyTex 則是用來編譯 PDF 文件所需的 LaTeX 發行版。</p>
 </div>
 </div>
@@ -569,8 +569,8 @@ Tip
 <p>安裝完畢後，可<a href="https://code.visualstudio.com/docs/configure/custom-layout#_secondary-side-bar">設定原本 Visual Studio Code 內建的 GitHub Copilot chat 介面不要每次都跑出來</a>：</p>
 <ol type="1">
 <li>開啟 Visual Studio Code 應用程式</li>
-<li>選擇 Settings :<br><img src="./images/macos_install/open_vscode_settings.png" class="img-fluid"></li>
-<li>在搜尋欄輸入 <code>workbench.secondarySideBar.defaultVisibility</code> ，然後出現的設定下拉選單，選擇 <strong>hidden</strong> ：<br><img src="./images/macos_install/vscode_hide_secondary_sidebar.png" class="img-fluid"></li>
+<li>選擇 Settings :<br><img src="../images/macos_install/open_vscode_settings.png" class="img-fluid"></li>
+<li>在搜尋欄輸入 <code>workbench.secondarySideBar.defaultVisibility</code> ，然後出現的設定下拉選單，選擇 <strong>hidden</strong> ：<br><img src="../images/macos_install/vscode_hide_secondary_sidebar.png" class="img-fluid"></li>
 </ol>
 </div>
 </div>
@@ -579,15 +579,15 @@ Tip
 <h3 class="anchored" data-anchor-id="安裝-visual-studio-code-擴充套件-1">安裝 Visual Studio Code 擴充套件</h3>
 <p>最快的方法是下載這個 GitHub Respository 的 <code>0-init</code> Release 壓縮檔:</p>
 <p><a href="https://github.com/windperson/QuartoRooCodeWorkshop/releases/tag/0-init" class="uri">https://github.com/windperson/QuartoRooCodeWorkshop/releases/tag/0-init</a></p>
-<p><img src="./images/macos_install/download_workshop_release_0.png" class="img-fluid"></p>
+<p><img src="../images/macos_install/download_workshop_release_0.png" class="img-fluid"></p>
 <p>解壓縮後，在 Visual Studio Code 中開啟解壓縮後的資料夾:</p>
-<p><img src="./images/macos_install/vscode_open_workshop_folder.png" class="img-fluid"></p>
-<p>然後右下角會跳出提示，詢問是否要安裝推薦的擴充套件:</p>
-<p><img src="./images/macos_install/vscode_prompt_recommended_extensions.png" class="img-fluid"></p>
+<p><img src="../images/macos_install/vscode_open_workshop_folder.png" class="img-fluid"> 然後右下角會跳出提示，詢問是否要安裝推薦的擴充套件:</p>
+<p><img src="../images/macos_install/vscode_prompt_recommended_extensions.png" class="img-fluid"></p>
 <p>可以按下 Install 直接安裝，或按 Show Recommendations 然後 Visual Studio Code 自動列出上述要安裝的擴充套件在最上面。</p>
-<p><img src="./images/macos_install/vscode_recommended_extensions_list.png" class="img-fluid"></p>
-<hr>
 </section>
+</section>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"><img src="../images/macos_install/vscode_recommended_extensions_list.png" class="img-fluid"></h2>
 <section id="optional-安裝-r-markdown-1" class="level3">
 <h3 class="anchored" data-anchor-id="optional-安裝-r-markdown-1">Optional: 安裝 R-markdown</h3>
 <p>假如文件中有使用到 R-markdwon 語法，請安裝 R 和 R-markdown：</p>
@@ -606,7 +606,7 @@ Tip
 <section id="驗證安裝是否成功-1" class="level3">
 <h3 class="anchored" data-anchor-id="驗證安裝是否成功-1">驗證安裝是否成功</h3>
 <p>在終端機 (Terminal) 輸入 <code>quarto check</code> 指令來驗證安裝是否成功：</p>
-<p><img src="./images/macos_install/quarto_check.png" class="img-fluid"></p>
+<p><img src="../images/macos_install/quarto_check.png" class="img-fluid"></p>
 <hr>
 </section>
 </section>
