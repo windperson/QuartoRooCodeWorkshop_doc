@@ -27,7 +27,7 @@ VSCode 在[ 1.102 版本內建跑 MCP Server 功能](https://code.visualstudio.c
 
 在 VSCode 成功啟動 Markitdown MCP Server 後，接著我們要在 Roo Code 中設定使用這個 MCP Server：
 
-1. 在 Markitdown MCP Server 啟動成功後，在 VSCode 的 MCP SERVERS 介面中，按滑鼠右鍵或是滑鼠左鍵點選右下角齒輪圖示開啟功能選單，選擇 "Show Configuration (SJON)"：<br/>![](./images/mcp/vscode_show_markitdown_mcp_server_configuration.png) 
+1. 在 Markitdown MCP Server 啟動成功後，在 VSCode 的 MCP SERVERS 介面中，按滑鼠右鍵或是滑鼠左鍵點選右下角齒輪圖示開啟功能選單，選擇 "Show Configuration (JSON)"：<br/>![](./images/mcp/vscode_show_markitdown_mcp_server_configuration.png) 
 2. 這時會打開一個新的 VSCode 編輯視窗，裡面是 Markitdown MCP Server 的設定檔內容，複製 `servers: {}` 區塊的內容:<br/>![](./images/mcp/vscode_markitdown_mcp_server_configuration_content.png)
 3. 接著打開 Roo Code 設定 MCP 的介面，選擇 "Edit Project MCP" 按鈕:<br/>![](./images/mcp/create_roo_code_project_mcp_setting.png)
 4. 此時會建立在專案目錄下 .roo 目錄內的 ***mcp.json*** 檔案，並且 VSCode 會自動開啟之，將剛剛複製的 Markitdown MCP Server 設定內容貼上:<br/>![](./images/mcp/roo_code_project_set_markitdown_mcp.png)<br/>然後存檔關閉此檔案。
