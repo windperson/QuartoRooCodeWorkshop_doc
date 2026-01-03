@@ -102,6 +102,6 @@
     "href": "roocode-vscode-markitdown-mcp.html#在-roo-code-中設定使用-vscode-的-markitdown-mcp-server",
     "title": "如何在 Roo Code 使用 VSCode 的內建 Markitdown MCP Server 功能",
     "section": "在 Roo Code 中設定使用 VSCode 的 Markitdown MCP Server",
-    "text": "在 Roo Code 中設定使用 VSCode 的 Markitdown MCP Server\n在 VSCode 成功啟動 Markitdown MCP Server 後，接著我們要在 Roo Code 中設定使用這個 MCP Server：\n\n在 Markitdown MCP Server 啟動成功後，在 VSCode 的 MCP SERVERS 介面中，按滑鼠右鍵或是滑鼠左鍵點選右下角齒輪圖示開啟功能選單，選擇 “Show Configuration (SJON)”：\n這時會打開一個新的 VSCode 編輯視窗，裡面是 Markitdown MCP Server 的設定檔內容，複製 servers: {} 區塊的內容:\n接著打開 Roo Code 設定 MCP 的介面，選擇 “Edit Project MCP” 按鈕:\n此時會建立在專案目錄下 .roo 目錄內的 mcp.json 檔案，並且 VSCode 會自動開啟之，將剛剛複製的 Markitdown MCP Server 設定內容貼上:然後存檔關閉此檔案。\n\n之後就可以在 Roo Code 中讓 Roo Code 配套的 LLM AI 模型去呼叫 VSCode 的 Markitdown MCP Server 了。\n例如以下是使用 Roo Code 設定使用 Mistral AI 模型，並且透過 Markitdown MCP Server 去轉換一個 .docx 報價單檔案後，可成功展示報價單表格的範例："
+    "text": "在 Roo Code 中設定使用 VSCode 的 Markitdown MCP Server\n在 VSCode 成功啟動 Markitdown MCP Server 後，接著我們要在 Roo Code 中設定使用這個 MCP Server：\n\n在 Markitdown MCP Server 啟動成功後，在 VSCode 的 MCP SERVERS 介面中，按滑鼠右鍵或是滑鼠左鍵點選右下角齒輪圖示開啟功能選單，選擇 “Show Configuration (JSON)”：\n這時會打開一個新的 VSCode 編輯視窗，裡面是 Markitdown MCP Server 的設定檔內容，複製 servers: {} 區塊的內容:\n接著打開 Roo Code 設定 MCP 的介面，選擇 “Edit Project MCP” 按鈕:\n此時會建立在專案目錄下 .roo 目錄內的 mcp.json 檔案，並且 VSCode 會自動開啟之，將剛剛複製的 Markitdown MCP Server 設定內容貼上:然後存檔關閉此檔案。\n\n之後就可以在 Roo Code 中讓 Roo Code 配套的 LLM AI 模型去呼叫 VSCode 的 Markitdown MCP Server 了。\n例如以下是使用 Roo Code 設定使用 Mistral AI 模型，並且透過 Markitdown MCP Server 去轉換一個 .docx 報價單檔案後，可成功展示報價單表格的範例："
   }
 ]
