@@ -2,9 +2,9 @@
 title: "Quarto Roo Code workshop"
 ---
 
-[Windows 相關工具安裝](./install-tools_windows.qmd)
+[Windows 相關工具安裝](./install-tools/install-tools_windows.qmd)
 
-[macOS 相關工具安裝](./install-tools_macos.qmd)
+[macOS 相關工具安裝](./install-tools/install-tools_macos.qmd)
 
 
 [Roo Code 擴充套件設定 Minstral AI API Key](./roocode-minstral-ai-setup.qmd)
@@ -13,3 +13,5 @@ title: "Quarto Roo Code workshop"
 ---
 
 [工作坊練習檔案GitHub](https://github.com/windperson/QuartoRooCodeWorkshop){target="_blank"}
+
+[如何在 Roo Code 使用 VSCode 的內建 Markitdown MCP Server 功能](./roocode-vscode-markitdown-mcp.qmd){target="_blank"}

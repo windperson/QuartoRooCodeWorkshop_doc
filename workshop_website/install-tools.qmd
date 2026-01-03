@@ -9,10 +9,10 @@ format:
 
 # Windows
 
-{{< include "./install-tools_windows.qmd" >}}
+{{< include "./install-tools/install-tools_windows.qmd" >}}
 
 # macOS
 
-{{< include "./install-tools_macos.qmd" >}}
+{{< include "./install-tools/install-tools_macos.qmd" >}}
 
 :::

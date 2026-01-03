@@ -73,7 +73,7 @@ Homebrew 提供了 Quarto 的安裝方式：<https://formulae.brew.sh/cask/quart
    brew install --cask quarto
    ```
 3. 安裝中會提示你輸入sudo密碼，請輸入你的 macOS 使用者密碼以繼續安裝。<br/>
-   ![](./images/macos_install/quarto_install_00.png)
+   ![](../images/macos_install/quarto_install_00.png)
 
 :::{.callout-tip}
 
@@ -84,7 +84,7 @@ quarto install chromium
 quarto install TinyTex
 ```
    
-![](./images/macos_install/quarto_install_tools.png)
+![](../images/macos_install/quarto_install_tools.png)
     
 chromium 是 Quarto 的 mermaid 語法預覽圖需要，而 TinyTex 則是用來編譯 PDF 文件所需的 LaTeX 發行版。
 :::
@@ -116,8 +116,8 @@ Homebrew 提供了 Visual Studio Code 的安裝方式：<https://formulae.brew.s
 安裝完畢後，可[設定原本 Visual Studio Code 內建的 GitHub Copilot chat 介面不要每次都跑出來](https://code.visualstudio.com/docs/configure/custom-layout#_secondary-side-bar)： 
 
 1. 開啟 Visual Studio Code 應用程式
-2. 選擇 Settings :<br/>![](./images/macos_install/open_vscode_settings.png)
-3. 在搜尋欄輸入 `workbench.secondarySideBar.defaultVisibility` ，然後出現的設定下拉選單，選擇 **hidden** ：<br/>![](./images/macos_install/vscode_hide_secondary_sidebar.png)
+2. 選擇 Settings :<br/>![](../images/macos_install/open_vscode_settings.png)
+3. 在搜尋欄輸入 `workbench.secondarySideBar.defaultVisibility` ，然後出現的設定下拉選單，選擇 **hidden** ：<br/>![](../images/macos_install/vscode_hide_secondary_sidebar.png)
 
 :::
 
@@ -127,20 +127,18 @@ Homebrew 提供了 Visual Studio Code 的安裝方式：<https://formulae.brew.s
 
 <https://github.com/windperson/QuartoRooCodeWorkshop/releases/tag/0-init>
 
-![](./images/macos_install/download_workshop_release_0.png)
+![](../images/macos_install/download_workshop_release_0.png)
 
 解壓縮後，在 Visual Studio Code 中開啟解壓縮後的資料夾:
 
-![](./images/macos_install/vscode_open_workshop_folder.png)
-
+![](../images/macos_install/vscode_open_workshop_folder.png)
 然後右下角會跳出提示，詢問是否要安裝推薦的擴充套件:
 
-![](./images/macos_install/vscode_prompt_recommended_extensions.png)
+![](../images/macos_install/vscode_prompt_recommended_extensions.png)
 
 可以按下 Install 直接安裝，或按 Show Recommendations 然後 Visual Studio Code 自動列出上述要安裝的擴充套件在最上面。
 
-![](./images/macos_install/vscode_recommended_extensions_list.png)
-
+![](../images/macos_install/vscode_recommended_extensions_list.png)
 ---
 
 ### Optional: 安裝 R-markdown
@@ -170,6 +168,6 @@ python3 -m pip install --upgrade pip; python3 -m pip install Jupyter
 
 在終端機 (Terminal) 輸入 `quarto check` 指令來驗證安裝是否成功：
 
-![](./images/macos_install/quarto_check.png)
+![](../images/macos_install/quarto_check.png)
 
 ---

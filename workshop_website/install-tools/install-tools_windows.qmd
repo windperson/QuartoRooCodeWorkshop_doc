@@ -37,7 +37,7 @@ scoop install quarto
 
 假如在一開始加入 r-bucket 時出現如下錯誤訊息，請先執行 `scoop install git` 指令安裝 git，再重新執行加入 r-bucket 的指令。
 
-![](./images/windows_install/scoop_add_r_bucket_error.png)
+![](../images/windows_install/scoop_add_r_bucket_error.png)
 
 :::{.callout-tip}
 
@@ -48,7 +48,7 @@ quarto install chromium
 quarto install TinyTex
 ```
    
-![](./images/windows_install/quarto_install_tools.png)
+![](../images/windows_install/quarto_install_tools.png)
     
 chromium 是 Quarto 的 mermaid 語法預覽圖需要，而 TinyTex 則是用來編譯 PDF 文件所需的 LaTeX 發行版。
 :::
@@ -67,8 +67,8 @@ scoop install extras/vscode
 安裝完畢後，可[設定原本 Visual Studio Code 內建的 GitHub Copilot chat 介面不要每次都跑出來](https://code.visualstudio.com/docs/configure/custom-layout#_secondary-side-bar)： 
 
 1. 開啟 Visual Studio Code 應用程式
-2. 選擇 Settings :<br/>![](./images/windows_install/open_vscode_settings.png)
-3. 在搜尋欄輸入 `workbench.secondarySideBar.defaultVisibility` ，然後出現的設定下拉選單，選擇 **hidden** ：<br/>![](./images/windows_install/vscode_hide_secondary_sidebar.png)
+2. 選擇 Settings :<br/>![](../images/windows_install/open_vscode_settings.png)
+3. 在搜尋欄輸入 `workbench.secondarySideBar.defaultVisibility` ，然後出現的設定下拉選單，選擇 **hidden** ：<br/>![](../images/windows_install/vscode_hide_secondary_sidebar.png)
 
 :::
 
@@ -78,15 +78,15 @@ scoop install extras/vscode
 
 <https://github.com/windperson/QuartoRooCodeWorkshop/releases/tag/0-init>
 
-![](./images/windows_install/download_workshop_release_0.png)
+![](../images/windows_install/download_workshop_release_0.png)
 
 解壓縮後，在 Visual Studio Code 中開啟解壓縮後的資料夾，右下角會跳出提示，詢問是否要安裝推薦的擴充套件:
 
-![](./images/windows_install/vscode_prompt_recommended_extensions.png)
+![](../images/windows_install/vscode_prompt_recommended_extensions.png)
 
 可以按下 Install 直接安裝，或按 Show Recommendations 然後 Visual Studio Code 自動列出上述要安裝的擴充套件在最上面。
 
-![](./images/windows_install/vscode_recommended_extensions_list.png)
+![](../images/windows_install/vscode_recommended_extensions_list.png)
 
 ---
 
